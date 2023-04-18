@@ -38,7 +38,12 @@ function OutlinedCounterCard({ color, count, title, prefix, suffix }) {
       textAlign="center"
       py={2}
     >
-      <SoftTypography variant="h6" color={color} fontWeight="medium" textTransform="capitalize">
+      <SoftTypography
+        variant="h6"
+        color={color}
+        fontWeight="medium"
+        textTransform="capitalize"
+      >
         {title}
       </SoftTypography>
       <SoftTypography variant="h4" fontWeight="bold">
@@ -69,7 +74,15 @@ OutlinedCounterCard.defaultProps = {
 
 // Typechecking props for the BlogCard
 OutlinedCounterCard.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf([
+    "primary",
+    "secondary",
+    "info",
+    "success",
+    "warning",
+    ,
+    "dark",
+  ]),
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   title: PropTypes.string.isRequired,
   prefix: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

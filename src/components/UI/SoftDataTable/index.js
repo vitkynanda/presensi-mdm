@@ -69,7 +69,7 @@ export default function SoftDataTable({
           />
         )}
       </SoftBox>
-      <SoftBox>{rest.isLoading && <LinearProgress color="error" />}</SoftBox>
+      <SoftBox>{rest.isLoading && <LinearProgress color="info" />}</SoftBox>
       <TableContainer>
         <Table id="myTable">
           <SoftBox component="thead">

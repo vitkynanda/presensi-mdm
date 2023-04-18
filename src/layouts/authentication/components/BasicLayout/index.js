@@ -49,8 +49,8 @@ function BasicLayout({ title, description, image, children }) {
           }) =>
             image &&
             `${linearGradient(
-              rgba(gradients.error.main, 0.6),
-              rgba(gradients.error.state, 0.6)
+              rgba(gradients.info.main, 0.6),
+              rgba(gradients.info.state, 0.6)
             )}, url(${image})`,
           backgroundSize: "cover",
           backgroundPosition: "center",

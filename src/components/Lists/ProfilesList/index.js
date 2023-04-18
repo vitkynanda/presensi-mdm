@@ -66,7 +66,7 @@ function ProfilesList({ title, profiles }) {
               component={Link}
               to={action.route}
               variant="text"
-              color="info"
+              color="info""
             >
               {action.label}
             </SoftButton>

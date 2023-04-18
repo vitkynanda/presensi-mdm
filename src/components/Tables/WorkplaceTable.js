@@ -29,7 +29,7 @@ const WorkplaceTable = () => {
         p={2}
         pt={3}
       >
-        <SoftTypography variant="h5">Users Data</SoftTypography>
+        <SoftTypography variant="h5">Workplaces Data</SoftTypography>
       </SoftBox>
       <SoftBox
         sx={{

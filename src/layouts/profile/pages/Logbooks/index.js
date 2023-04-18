@@ -38,7 +38,7 @@ const Logbooks = () => {
           {!showForm && (
             <SoftButton
               onClick={() => setShowForm(!showForm)}
-              color="error"
+              color="info"
               variant="gradient"
               size={matchesMd ? "small" : undefined}
             >

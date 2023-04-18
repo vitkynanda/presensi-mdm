@@ -38,7 +38,7 @@ const NotFoundPage = ({ dispatch }) => {
         <SoftButton
           onClick={() => navigate(-1)}
           variant="gradient"
-          color="error"
+          color="info"
         >
           Go Back
         </SoftButton>

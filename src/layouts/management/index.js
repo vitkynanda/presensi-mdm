@@ -21,12 +21,10 @@ import { useUiStateStore } from "store/ui-state";
 import TabPanel from "components/UI/TabPanel";
 import SoftTypography from "components/UI/SoftTypography";
 import { Divider } from "@mui/material";
-import TeamTable from "../../components/Tables/TeamTable";
 import UserTable from "../../components/Tables/UserTable";
 import WorkplaceTable from "../../components/Tables/WorkplaceTable";
 import RoleTable from "../../components/Tables/RoleTable";
 import PresencesManagement from "./pages/PresencesManagement";
-import LogbooksManagement from "./pages/LogbooksManagement";
 
 function Managements() {
   const { currentAdminTab } = useUiStateStore();
@@ -39,30 +37,20 @@ function Managements() {
         <PresencesManagement />
       </TabPanel>
       <TabPanel value={currentAdminTab} index={1}>
-        <LogbooksManagement />
-      </TabPanel>
-      <TabPanel value={currentAdminTab} index={2}>
-        <SoftTypography variant="h5" fontWeight="bold" mt={2}>
-          Teams Management
-        </SoftTypography>
-        <Divider />
-        <TeamTable />
-      </TabPanel>
-      <TabPanel value={currentAdminTab} index={3}>
         <SoftTypography variant="h5" fontWeight="bold" mt={2}>
           Users Management
         </SoftTypography>
         <Divider />
         <UserTable />
       </TabPanel>
-      <TabPanel value={currentAdminTab} index={4}>
+      <TabPanel value={currentAdminTab} index={2}>
         <SoftTypography variant="h5" fontWeight="bold" mt={2}>
           Workplaces Management
         </SoftTypography>
         <Divider />
         <WorkplaceTable />
       </TabPanel>
-      <TabPanel value={currentAdminTab} index={5}>
+      <TabPanel value={currentAdminTab} index={3}>
         <SoftTypography variant="h5" fontWeight="bold" mt={2}>
           Roles Management
         </SoftTypography>

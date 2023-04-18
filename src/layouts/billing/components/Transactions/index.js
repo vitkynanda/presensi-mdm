@@ -28,8 +28,18 @@ import Transaction from "layouts/billing/components/Transaction";
 function Transactions() {
   return (
     <Card sx={{ height: "100%" }}>
-      <SoftBox display="flex" justifyContent="space-between" alignItems="center" pt={3} px={2}>
-        <SoftTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+      <SoftBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={3}
+        px={2}
+      >
+        <SoftTypography
+          variant="h6"
+          fontWeight="medium"
+          textTransform="capitalize"
+        >
           Your Transaction&apos;s
         </SoftTypography>
         <SoftBox display="flex" alignItems="flex-start">
@@ -63,7 +73,7 @@ function Transactions() {
           sx={{ listStyle: "none" }}
         >
           <Transaction
-            color="error"
+            color="info"
             icon="arrow_downward"
             name="Netflix"
             description="27 March 2020, at 12:30 PM"

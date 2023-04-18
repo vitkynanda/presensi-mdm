@@ -49,7 +49,7 @@ function SignIn() {
 
   const { userLoggedIn, setUserLoggedIn } = useUiStateStore();
 
-  const handleSignUpIn = async (e) => {
+  const handleSignIn = async (e) => {
     setLoading(true);
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -64,7 +64,7 @@ function SignIn() {
         formData.get("password")
       );
       if (userCredential) {
-        const result = await getUserInfo(userCredential.user.uid);
+        const result = await getUserInfo(formData.get("email"));
         if (result) {
           setUserLoggedIn({ ...userLoggedIn, userInfo: result });
           navigate("/profile");
@@ -82,9 +82,9 @@ function SignIn() {
       title="Welcome back"
       description="Enter your email and password to sign in"
       image={curved9}
-      color="error"
+      color="info"
     >
-      <SoftBox component="form" role="form" onSubmit={handleSignUpIn}>
+      <SoftBox component="form" role="form" onSubmit={handleSignIn}>
         <SoftBox mb={2}>
           <SoftBox mb={1} ml={0.5}>
             <SoftTypography
@@ -123,7 +123,7 @@ function SignIn() {
         <SoftBox mt={4} mb={1}>
           <SoftButton
             variant="gradient"
-            color="error"
+            color="info"
             fullWidth
             type="submit"
             endIcon={
@@ -141,7 +141,7 @@ function SignIn() {
               component={Link}
               to="/authentication/sign-up"
               variant="button"
-              color="error"
+              color="info"
               fontWeight="medium"
               textGradient
             >

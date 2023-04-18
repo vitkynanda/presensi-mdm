@@ -28,9 +28,9 @@ import SoftTypography from "components/UI/SoftTypography";
 import SoftAvatar from "components/UI/SoftAvatar";
 
 // Soft UI Dashboard React icons
-import Cube from "components/Icons/Cube";
+// import Cube from "components/Icons/Cube";
 import Document from "components/Icons/Document";
-import Settings from "components/Icons/Settings";
+// import Settings from "components/Icons/Settings";
 
 // Soft UI Dashboard React base styles
 import breakpoints from "assets/theme/base/breakpoints";
@@ -39,9 +39,10 @@ import breakpoints from "assets/theme/base/breakpoints";
 import defaultProfile from "assets/images/default-profile.png";
 import { useUiStateStore } from "store/ui-state";
 import { formatKey } from "utils";
-import Office from "components/Icons/Office";
+// import Office from "components/Icons/Office";
 import CustomerSupport from "components/Icons/CustomerSupport";
 import SpaceShip from "components/Icons/SpaceShip";
+import Office from "components/Icons/Office";
 
 function ManagementHeader() {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
@@ -115,11 +116,9 @@ function ManagementHeader() {
                 sx={{ background: "transparent" }}
               >
                 <Tab label="Presences" icon={<Document />} index={0} />
-                <Tab label="Logbooks" icon={<Settings />} index={1} />
-                <Tab label="Teams" icon={<Cube />} index={2} />
-                <Tab label="Users" icon={<CustomerSupport />} index={3} />
-                <Tab label="Workplaces" icon={<Office />} index={4} />
-                <Tab label="Roles" icon={<SpaceShip />} index={5} />
+                <Tab label="Users" icon={<CustomerSupport />} index={1} />
+                <Tab label="Workplaces" icon={<Office />} index={2} />
+                <Tab label="Roles" icon={<SpaceShip />} index={3} />
               </Tabs>
             </AppBar>
           </Grid>

@@ -50,7 +50,7 @@ export default function PresenceModal({
           height="200px"
         />
         {!validWFO && workMode === "WFO" && title === "Clock In" && (
-          <SoftTypography fontSize={10} color="error">
+          <SoftTypography fontSize={10} color="info">
             *your current location is not within range of the workplace, please
             choose another work mode.
           </SoftTypography>
@@ -69,7 +69,7 @@ export default function PresenceModal({
       <SoftBox textAlign="right">
         <SoftButton
           variant="gradient"
-          color="error"
+          color="info"
           endIcon={
             loading ? <CircularProgress color="inherit" size={18} /> : null
           }

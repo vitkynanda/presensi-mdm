@@ -45,7 +45,11 @@ function Bill({ name, company, email, vat, noGutter }) {
           flexDirection={{ xs: "column", sm: "row" }}
           mb={2}
         >
-          <SoftTypography variant="button" fontWeight="medium" textTransform="capitalize">
+          <SoftTypography
+            variant="button"
+            fontWeight="medium"
+            textTransform="capitalize"
+          >
             {name}
           </SoftTypography>
 
@@ -56,7 +60,7 @@ function Bill({ name, company, email, vat, noGutter }) {
             ml={{ xs: -1.5, sm: 0 }}
           >
             <SoftBox mr={1}>
-              <SoftButton variant="text" color="error">
+              <SoftButton variant="text" color="info">
                 <Icon>delete</Icon>&nbsp;delete
               </SoftButton>
             </SoftBox>
@@ -68,7 +72,11 @@ function Bill({ name, company, email, vat, noGutter }) {
         <SoftBox mb={1} lineHeight={0}>
           <SoftTypography variant="caption" color="text">
             Company Name:&nbsp;&nbsp;&nbsp;
-            <SoftTypography variant="caption" fontWeight="medium" textTransform="capitalize">
+            <SoftTypography
+              variant="caption"
+              fontWeight="medium"
+              textTransform="capitalize"
+            >
               {company}
             </SoftTypography>
           </SoftTypography>

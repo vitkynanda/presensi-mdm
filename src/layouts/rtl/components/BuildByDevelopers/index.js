@@ -81,7 +81,7 @@ function BuildByDevelopers() {
               display="grid"
               justifyContent="center"
               alignItems="center"
-              bgColor="info"
+              bgcolor="info""
               borderRadius="lg"
               variant="gradient"
             >

@@ -162,12 +162,12 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
               letterSpacing: 0,
               position: "relative",
             }}
-            color={"error"}
+            color={"info"}
           >
-            SHARING VISION{" "}
+            BRI MDM{" "}
             <SoftTypography
               component="span"
-              color={"error"}
+              color={"info"}
               sx={{
                 fontSize: 10,
                 fontWeight: 600,

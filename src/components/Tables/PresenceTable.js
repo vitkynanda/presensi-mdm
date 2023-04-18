@@ -114,7 +114,7 @@ const PresenceTable = ({ onSetDate }) => {
       <SoftBox textAlign="right">
         <SoftButton
           size="small"
-          color="error"
+          color="info"
           variant="gradient"
           onClick={handleFilter}
           disabled={globalLoading}
