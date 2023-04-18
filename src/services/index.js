@@ -375,13 +375,13 @@ export const getLogbookInfo = async (userId) => {
   }
 };
 
-export const getUserInfo = async (userId) => {
+export const getUserInfo = async (email) => {
   try {
-    const q = query(collection(db, "users"), where("id", "==", userId));
+    const q = query(collection(db, "users"));
     const querySnapshot = await getDocs(q);
-    const [data] = querySnapshot.docs.map((doc) => doc.data());
+    const data = querySnapshot.docs.map((doc) => doc.data());
 
-    return data;
+    return data.find((doc) => doc.email === email);
   } catch (e) {
     return false;
   }

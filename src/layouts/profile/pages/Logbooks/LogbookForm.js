@@ -325,12 +325,12 @@ const LogbookForm = ({ handleCloseForm }) => {
         alignItems="center"
         mt={2}
       >
-        <SoftButton onClick={handleCloseForm} color="error" variant="outlined">
+        <SoftButton onClick={handleCloseForm} color="info" variant="outlined">
           Cancel
         </SoftButton>
         <SoftButton
           onClick={selectedLogbook.id ? handleEditLogbook : handleAddLogbook}
-          color="error"
+          color="info"
           variant="gradient"
           endIcon={
             globalLoading ? (

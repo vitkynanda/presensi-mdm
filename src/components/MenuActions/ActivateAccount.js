@@ -1,10 +1,14 @@
 import { Switch } from "@mui/material";
+import { toast } from "react-toastify";
 import { getAllUserData, verifyUserAccount } from "services";
 import { useUiStateStore } from "store/ui-state";
 
 const ActivateAccount = ({ userData }) => {
   const { setGlobalLoading, setAllUserData } = useUiStateStore();
   const handleActivateAccount = async () => {
+    console.log(userData);
+    if (!userData.workplace.id)
+      return toast.error("Please update user data before activate account");
     setGlobalLoading(true);
     const res = await verifyUserAccount(userData);
     if (res) {
@@ -16,7 +20,7 @@ const ActivateAccount = ({ userData }) => {
 
   return (
     <Switch
-      color="error"
+      color="info"
       checked={userData.is_verified}
       onChange={handleActivateAccount}
     />

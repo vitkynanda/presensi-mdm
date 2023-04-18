@@ -77,7 +77,7 @@ function TodoList() {
       </SoftBox>
       <SoftBox bgColor="grey-100" mt="auto">
         <Tooltip title="Show More" placement="top" sx={{ cursor: "pointer" }}>
-          <SoftBox textAlign="center" py={0.5} color="info" lineHeight={0}>
+          <SoftBox textAlign="center" py={0.5} color="info"" lineHeight={0}>
             <Icon sx={{ fontWeight: "bold" }} color="inherit" fontSize="default">
               keyboard_arrow_down
             </Icon>

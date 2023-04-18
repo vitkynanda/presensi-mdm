@@ -34,7 +34,7 @@ import curved6 from "assets/images/curved-images/curved14.jpg";
 import { auth } from "config/firebase";
 import { toast } from "react-toastify";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { addUser } from "services";
+import { addUser, getUserInfo } from "services";
 import { useState } from "react";
 import { CircularProgress } from "@mui/material";
 
@@ -58,15 +58,24 @@ function SignUp() {
           await updateProfile(auth.currentUser, {
             displayName: formData.get("name"),
           });
-          const result = await addUser({
-            id: userCredential.user.uid,
-            name: formData.get("name"),
-            email: formData.get("email"),
-          });
-          if (result) {
-            toast.success("Account registered successfully");
-            navigate("/authentication/sign-in");
+
+          const userExist = await getUserInfo(formData.get("email"));
+
+          if (!userExist) {
+            const result = await addUser({
+              id: userCredential.user.uid,
+              name: formData.get("name"),
+              email: formData.get("email"),
+            });
+            if (result) {
+              toast.success("Account registered successfully");
+              navigate("/authentication/sign-in");
+            }
+            return;
           }
+
+          toast.success("Account registered successfully");
+          navigate("/authentication/sign-in");
         } catch (e) {
           toast.error(e.message);
         }
@@ -85,7 +94,7 @@ function SignUp() {
     >
       <Card>
         <SoftBox p={3} mb={1} textAlign="center">
-          <SoftTypography variant="h5" fontWeight="medium" color="error">
+          <SoftTypography variant="h5" fontWeight="medium" color="info">
             Register Account
           </SoftTypography>
         </SoftBox>
@@ -107,7 +116,7 @@ function SignUp() {
             <SoftBox mt={4} mb={1}>
               <SoftButton
                 variant="gradient"
-                color="error"
+                color="info"
                 fullWidth
                 type="submit"
                 endIcon={
@@ -131,7 +140,7 @@ function SignUp() {
                   component={Link}
                   to="/authentication/sign-in"
                   variant="button"
-                  color="error"
+                  color="info"
                   fontWeight="bold"
                   textGradient
                 >

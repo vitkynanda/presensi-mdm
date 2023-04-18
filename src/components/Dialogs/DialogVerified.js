@@ -43,7 +43,7 @@ export default function DialogVerified({ open }) {
 
         <DialogActions>
           <SoftButton
-            color="error"
+            color="info"
             size="small"
             variant="gradient"
             onClick={() => {

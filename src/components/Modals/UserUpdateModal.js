@@ -7,7 +7,6 @@ import InputWithLabel from "components/Inputs/InputWithLabel";
 import AutoCompleteOption from "components/UI/AutoCompleteOption";
 import {
   getAllRoleData,
-  getAllTeamData,
   getAllUserData,
   getAllWorkplaceData,
   updateUser,
@@ -23,8 +22,6 @@ export default function UserUpdateModal({
   rowData,
 }) {
   const {
-    allTeamData,
-    setAllTeamData,
     allRoleData,
     setAllRoleData,
     setAllWorkplaceData,
@@ -33,7 +30,12 @@ export default function UserUpdateModal({
     setAllUserData,
     globalLoading,
   } = useUiStateStore();
-  const [userData, setUserData] = useState(rowData);
+  const [userData, setUserData] = useState({
+    ...rowData,
+    team: rowData.team.id
+      ? rowData.team
+      : { id: "2UX8jtmIMLtt9JFp6Cuq", name: "Master Data Management" },
+  });
   const matchesmd = useMediaQuery("(max-width:600px)");
   const ModalWrapper = matchesmd ? SoftBottomModal : SoftModal;
 
@@ -60,7 +62,6 @@ export default function UserUpdateModal({
       const updatedUser = await getAllUserData();
       if (updatedUser) setAllUserData(updatedUser);
     }
-
     setGlobalLoading(false);
   };
 
@@ -105,18 +106,10 @@ export default function UserUpdateModal({
         fetcher={getAllWorkplaceData}
         setOption={setAllWorkplaceData}
       />
-      <AutoCompleteOption
-        options={allTeamData.map((team) => ({
-          label: team?.name,
-          id: team?.id,
-        }))}
-        value={[
-          "team",
-          { label: userData?.team?.name, id: userData?.team?.id },
-        ]}
-        onSelect={handleChangeSelect}
-        fetcher={getAllTeamData}
-        setOption={setAllTeamData}
+      <InputWithLabel
+        value={["team", userData.team.name]}
+        onChange={handleChangeInput}
+        disabled={true}
       />
       <AutoCompleteOption
         options={allRoleData
@@ -145,7 +138,7 @@ export default function UserUpdateModal({
           }
           onClick={handleUpdate}
           variant="gradient"
-          color="error"
+          color="info"
           disabled={globalLoading}
         >
           Update

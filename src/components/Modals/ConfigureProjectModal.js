@@ -144,9 +144,9 @@ export default function ConfigureProjectModal() {
       ) : (
         <SoftButton
           variant="outlined"
-          color="error"
+          color="info"
           size="small"
-          endIcon={<Settings color="error" size="large" />}
+          endIcon={<Settings color="info" size="large" />}
           onClick={() => setOpen(true)}
         >
           Configure Project
@@ -173,7 +173,7 @@ export default function ConfigureProjectModal() {
             <SoftBox textAlign="right">
               <SoftButton
                 variant="gradient"
-                color="error"
+                color="info"
                 disabled={!project || loading}
                 endIcon={
                   loading ? (
@@ -240,7 +240,7 @@ export default function ConfigureProjectModal() {
               <SoftButton
                 variant="gradient"
                 disabled={!selectedProject.id || !project || loading}
-                color="error"
+                color="info"
                 endIcon={
                   loading ? (
                     <CircularProgress color="inherit" size={18} />

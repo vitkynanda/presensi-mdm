@@ -91,7 +91,7 @@ export default function PresenceUpdateModal({
           }
           onClick={handleUpdate}
           variant="gradient"
-          color="error"
+          color="info"
           disabled={
             globalLoading ||
             (presenceData.clock_out !== "" &&

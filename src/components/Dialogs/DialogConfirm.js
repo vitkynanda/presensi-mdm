@@ -62,7 +62,7 @@ export default function DialogConfirm({
 
         <DialogActions>
           <SoftButton
-            color="error"
+            color="info"
             variant="text"
             size="small"
             onClick={handleClose}
@@ -71,7 +71,7 @@ export default function DialogConfirm({
             Cancel
           </SoftButton>
           <SoftButton
-            color="error"
+            color="info"
             size="small"
             variant="gradient"
             onClick={() => action()}

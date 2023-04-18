@@ -54,13 +54,13 @@ function OrdersOverview() {
           dateTime="22 ديسمبر 7:20 مساءً"
         />
         <TimelineItem
-          color="error"
+          color="info"
           icon="inventory_2"
           title="طلب جديد # 1832412"
           dateTime="21 ديسمبر 11 م"
         />
         <TimelineItem
-          color="info"
+          color="info""
           icon="shopping_cart"
           title="مدفوعات الخادم لشهر أبريل"
           dateTime="21 ديسمبر 9:34 مساءً"

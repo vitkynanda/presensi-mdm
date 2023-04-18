@@ -103,8 +103,8 @@ function CoverLayout({
                   palette: { gradients },
                 }) =>
                   `${linearGradient(
-                    rgba(gradients.error.main, 0.6),
-                    rgba(gradients.error.state, 0.6)
+                    rgba(gradients.info.main, 0.6),
+                    rgba(gradients.info.state, 0.6)
                   )}, url(${image})`,
                 backgroundSize: "cover",
                 transform: "skewX(10deg)",

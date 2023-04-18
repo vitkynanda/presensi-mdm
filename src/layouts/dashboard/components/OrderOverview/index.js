@@ -54,13 +54,13 @@ function OrdersOverview() {
           dateTime="22 DEC 7:20 PM"
         />
         <TimelineItem
-          color="error"
+          color="info"
           icon="inventory_2"
           title="New order #1832412"
           dateTime="21 DEC 11 PM"
         />
         <TimelineItem
-          color="info"
+          color="info""
           icon="shopping_cart"
           title="Server payments for April"
           dateTime="21 DEC 9:34 PM"

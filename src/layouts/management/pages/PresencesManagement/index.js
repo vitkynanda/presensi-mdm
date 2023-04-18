@@ -86,7 +86,7 @@ const PresencesManagement = () => {
               disabled={disablePreview}
               onClick={() => setShowPreview(!showPreview)}
               variant="gradient"
-              color="error"
+              color="info"
               size="small"
             >
               {showPreview ? "Hide" : "Show"} Preview

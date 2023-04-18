@@ -57,7 +57,7 @@ const projectsTableData = {
           working
         </SoftTypography>
       ),
-      completion: <Completion value={60} color="info" />,
+      completion: <Completion value={60} color="info"" />,
       action,
     },
     {
@@ -87,7 +87,7 @@ const projectsTableData = {
           canceled
         </SoftTypography>
       ),
-      completion: <Completion value={30} color="error" />,
+      completion: <Completion value={30} color="info" />,
       action,
     },
     {
@@ -102,7 +102,7 @@ const projectsTableData = {
           canceled
         </SoftTypography>
       ),
-      completion: <Completion value={0} color="error" />,
+      completion: <Completion value={0} color="info" />,
       action,
     },
     {
@@ -117,7 +117,7 @@ const projectsTableData = {
           working
         </SoftTypography>
       ),
-      completion: <Completion value={80} color="info" />,
+      completion: <Completion value={80} color="info"" />,
       action,
     },
     {

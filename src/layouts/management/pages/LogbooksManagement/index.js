@@ -87,7 +87,7 @@ const LogbooksManagement = () => {
               disabled={disablePreview || allLogbookData.length === 0}
               onClick={() => setShowPreview(!showPreview)}
               variant="gradient"
-              color="error"
+              color="info"
               size="small"
             >
               {showPreview ? "Hide" : "Show"} Preview

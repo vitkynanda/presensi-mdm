@@ -103,12 +103,12 @@ function DefaultNavbar({ transparent, light, action, logoColor }) {
         <SoftTypography
           variant="h5"
           sx={{ fontWeight: 600, letterSpacing: 0, position: "relative" }}
-          color={logoColor || "error"}
+          color={logoColor || "info"}
         >
-          SHARING VISION{" "}
+          BRI MDM{" "}
           <SoftTypography
             component="span"
-            color={logoColor || "error"}
+            color={logoColor || "info"}
             sx={{
               fontSize: 10,
               fontWeight: 600,
